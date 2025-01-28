@@ -1,0 +1,40 @@
+@media(max-width : 990px) {
+    .converter{
+        &__interface{
+            flex-direction: column;
+            row-gap: 16px;
+        }
+
+        &__footer {
+            flex-direction: column;
+            row-gap: 16px;
+
+        }
+    }
+}
+
+@media(max-width : 740px) {
+    .converter{
+        padding: 30px;
+
+        &__inputs-wrapper {
+            width: 330px;
+        }
+
+        &__input{
+            width: 180px;
+        }
+
+        &__select {
+            width: 140px;
+        }
+
+        &__button {
+            width: 222px;
+        }
+
+        &__footer {
+            align-items: center;
+        }
+    }
+}

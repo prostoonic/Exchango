@@ -7,7 +7,6 @@
 
 body {
     background-color: var(--color-light-gray);
-    
 }
 
 h1,
@@ -17,21 +16,61 @@ h2{
 }
 
 h1 {
-    font-size: 60px;
+    @include fluid-text(32, 60);
 }
 
 h2 {
-    font-size: 32px;
+    @include fluid-text(20, 32);
 }
 
 .button {
     height: 46px;
     background-color: var(--color-red);
     color: var(--color-light);
+    border: 0;
+    border-radius: var(--border-radius);
+}
+
+button:hover {
+    background-color: rgb(241, 11, 11);
+    transition-duration: var(--transition-duration);
 }
 
 span {
     font-family: var(--font-family-base);
     font-weight: bold;
     font-size: 16px;
+}
+
+select{
+    border-left: 0;
+    width: 140px;
+}
+
+input {
+    width: 220px;
+
+}
+
+.input {
+    height: 64px;
+    border-color: var(--color-dark-gray);
+}
+
+select,
+input {
+    outline: 0;
+    border-color: var(--color-red);
+}
+
+select,
+input :focus{
+    border-color: var(--color-red);
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

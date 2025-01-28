@@ -15,8 +15,8 @@ export default function App() {
         <div className="content converter__body">
           <div className="converter__interface">
             <div className="converter__inputs-wrapper">
-              <input type="number" className="converter__input input converter__amount-input"/>
-                <select name="currency" id="" className="converter__select input ">
+              <input type="number"  min="0" className="converter__input input converter__amount-input"/>
+                <select name="currency" id="" className="converter__select input select">
                   <option value="USD">USD</option>
                   <option value="BYN">BYN</option>
                   <option value="EUR">EUR</option>
@@ -24,8 +24,8 @@ export default function App() {
               </div>
               <RotateIcon/>
               <div className="converter__inputs-wrapper">
-              <input type="number" className="converter__input input converter__converted-input"/>
-                <select name="currency" id="" className="converter__select input ">
+              <input type="number" min="1" className="converter__input input converter__converted-input"/>
+                <select name="currency" id="" className="converter__select input select">
                   <option value="USD">USD</option>
                   <option value="BYN">BYN</option>
                   <option value="EUR">EUR</option>

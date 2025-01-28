@@ -4,21 +4,79 @@
     height: 370px;
     position: absolute;
     z-index: 1;
-    top: 80px;
+    top: 70px;
     left: 0px;
 }
 .header-wrapper {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .header {
-    margin-block: 100px;
+    margin-block: 70px;
     position: relative;
     z-index: 2;
 }
 
 .converter {
+    display: flex;
     background-color: var(--color-light);
     max-width: 900px;
     position: relative;
     z-index: 9999;
+    padding: 40px 40px 30px 40px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--border-radius);
+    row-gap: 30px;
+    text-wrap: pretty;
+    margin: 40px;
+
+
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        max-width: 650px;
+        row-gap: 30px;
+        text-align: center;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    &__interface {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        align-items: center;
+    }
+
+    &__inputs-wrapper {
+        width: 370px;
+    }
+
+    
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__exchange-rate{
+        display: flex;
+        column-gap: 5px;
+    }
+
+    &__exchange-rate::after {
+        content: url(./../images/info-circle.png);
+    }
+
+    &__button {
+        width: 370px;
+    }
+
 }

@@ -48,6 +48,10 @@ table {
   border-spacing: 0;
 }
 
+input {
+  padding: 0;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url(./../fonts/Roboto-Bold.woff2) format("woff2");
@@ -74,6 +78,7 @@ table {
   --border: 1px solid var(--color-dark-gray);
   --border-radius:4px;
   --font-family-base:"Roboto", sans-serif;
+  --transition-duration: 0.2s;
 }
 
 #root {
@@ -94,17 +99,24 @@ h2 {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: clamp(32px, 3.125vw, 60px);
 }
 
 h2 {
-  font-size: 32px;
+  font-size: clamp(20px, 1.6666666667vw, 32px);
 }
 
 .button {
   height: 46px;
   background-color: var(--color-red);
   color: var(--color-light);
+  border: 0;
+  border-radius: var(--border-radius);
+}
+
+button:hover {
+  background-color: rgb(241, 11, 11);
+  transition-duration: var(--transition-duration);
 }
 
 span {
@@ -113,29 +125,138 @@ span {
   font-size: 16px;
 }
 
+select {
+  border-left: 0;
+  width: 140px;
+}
+
+input {
+  width: 220px;
+}
+
+.input {
+  height: 64px;
+  border-color: var(--color-dark-gray);
+}
+
+select,
+input {
+  outline: 0;
+  border-color: var(--color-red);
+}
+
+select,
+input :focus {
+  border-color: var(--color-red);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .background {
   background-color: var(--color-light-blue);
   width: 100%;
   height: 370px;
   position: absolute;
   z-index: 1;
-  top: 80px;
+  top: 70px;
   left: 0px;
 }
 
 .header-wrapper {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
-  margin-block: 100px;
+  margin-block: 70px;
   position: relative;
   z-index: 2;
 }
 
 .converter {
+  display: flex;
   background-color: var(--color-light);
   max-width: 900px;
   position: relative;
   z-index: 9999;
+  padding: 40px 40px 30px 40px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--border-radius);
+  row-gap: 30px;
+  text-wrap: pretty;
+  margin: 40px;
+}
+.converter__header {
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  row-gap: 30px;
+  text-align: center;
+}
+.converter__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.converter__interface {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  align-items: center;
+}
+.converter__inputs-wrapper {
+  width: 370px;
+}
+.converter__footer {
+  display: flex;
+  justify-content: space-between;
+}
+.converter__exchange-rate {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.converter__exchange-rate::after {
+  content: url(./../images/info-circle.png);
+}
+.converter__button {
+  width: 370px;
+}
+
+@media (max-width: 990px) {
+  .converter__interface {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  .converter__footer {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+}
+@media (max-width: 740px) {
+  .converter {
+    padding: 30px;
+  }
+  .converter__inputs-wrapper {
+    width: 330px;
+  }
+  .converter__input {
+    width: 180px;
+  }
+  .converter__select {
+    width: 140px;
+  }
+  .converter__button {
+    width: 222px;
+  }
+  .converter__footer {
+    align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */
