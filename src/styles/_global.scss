@@ -25,13 +25,16 @@ h2 {
 
 .button {
     height: 46px;
-    background-color: var(--color-red);
     color: var(--color-light);
     border: 0;
     border-radius: var(--border-radius);
 }
 
-button:hover {
+.red-button {
+    background-color: var(--color-red);
+}
+
+.red-button:hover {
     background-color: rgb(241, 11, 11);
     transition-duration: var(--transition-duration);
 }

@@ -57,13 +57,37 @@
 
     &__inputs-wrapper {
         width: 370px;
+        height: 60px;
     }
 
+    &__input {
+        border: 0;
+    }
+
+    &__reverse-button {
+        background-color: transparent;
+        border: 0;
+        border-radius: 50%;
+        padding: 6px;
+    }
     
+    &__reverse-button:hover {
+        background-color: var(--color-light-gray);
+        transition-duration: var(--transition-duration);
+    }
 
     &__footer {
         display: flex;
-        justify-content: space-between;
+    }
+
+    &__footer-rate-wrapper {
+        width: 50%;
+    }
+
+    &__footer-button-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
     }
 
     &__exchange-rate{
@@ -75,7 +99,7 @@
         content: url(./../images/info-circle.png);
     }
 
-    &__button {
+    &__submit-button {
         width: 370px;
     }
 

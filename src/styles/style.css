@@ -108,13 +108,16 @@ h2 {
 
 .button {
   height: 46px;
-  background-color: var(--color-red);
   color: var(--color-light);
   border: 0;
   border-radius: var(--border-radius);
 }
 
-button:hover {
+.red-button {
+  background-color: var(--color-red);
+}
+
+.red-button:hover {
   background-color: rgb(241, 11, 11);
   transition-duration: var(--transition-duration);
 }
@@ -213,10 +216,31 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .converter__inputs-wrapper {
   width: 370px;
+  height: 60px;
+}
+.converter__input {
+  border: 0;
+}
+.converter__reverse-button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  padding: 6px;
+}
+.converter__reverse-button:hover {
+  background-color: var(--color-light-gray);
+  transition-duration: var(--transition-duration);
 }
 .converter__footer {
   display: flex;
-  justify-content: space-between;
+}
+.converter__footer-rate-wrapper {
+  width: 50%;
+}
+.converter__footer-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
 }
 .converter__exchange-rate {
   display: flex;
@@ -226,7 +250,7 @@ input[type=number]::-webkit-inner-spin-button {
 .converter__exchange-rate::after {
   content: url(./../images/info-circle.png);
 }
-.converter__button {
+.converter__submit-button {
   width: 370px;
 }
 
